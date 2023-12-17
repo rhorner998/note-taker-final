@@ -1,4 +1,3 @@
-
 let noteForm;
 let noteTitle;
 let noteText;
@@ -132,6 +131,7 @@ const handleRenderBtns = () => {
 const renderNoteList = async (notes) => {
   let jsonNotes = await notes.json();
   if (window.location.pathname === '/notes') {
+    console.log(jsonNotes)
     noteList.forEach((el) => (el.innerHTML = ''));
   }
 
@@ -193,4 +193,3 @@ if (window.location.pathname === '/notes') {
 }
 
 getAndRenderNotes();
-
